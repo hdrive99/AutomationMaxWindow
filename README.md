@@ -14,7 +14,7 @@ Program parameters to maximize windows upon opening exist, but they occur before
 # Customization
 Multiple conditions can be set for determining which windows should be maximized, instead of the default which maximizes every window. For example, name.Contains("Notepad") will maximize every window that has "Notepad" as a substring in its window title. 
 
-The app also restarts on a schedule, for when the handlers close unexpectedly, and to clear memory usage buildup (which is minor, but still worth clearing). This schedule can be changed by editing the value in WaitOne(21600000), which is the default schedule of 6 hours (in milliseconds). You can exclude the number to wait indefinitely (until an error occurs). If you don't want the app to restart upon crashing or waiting, remove RestartApplication(). 
+The app also restarts on a schedule, for when the handlers close unexpectedly, and to clear memory usage buildup (which is minor, but still worth clearing). This schedule can be changed by editing the value in WaitOne(21600000), which is the default schedule of every 6 hours (in milliseconds). You can exclude the number to wait indefinitely (until an error occurs). If you don't want the app to restart upon crashing or waiting, remove RestartApplication(). 
 
 # Run this app in the background
 Change the output type in AutomationMaxWindow.csproj to winexe instead of exe to run the app in the background, before building the program. You can also remove the Console.WriteLine() lines if you don't want the app to log your window titles in the console. 
